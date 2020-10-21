@@ -58,15 +58,15 @@ p {
   padding: .5em 1.25em;
   background: var(--clr-accent, rgba(1, 23, 41, 0.692));
   border-radius: .25em;
-  transition:
-    trasform 250ms ease-in-out,
+  transition: 
+    trasform 250ms ease-in-out, 
     opacity 250ms linear;
 }
 
 .btn:hover,
 .btn:focus {
   transform: scale(1.1);
-  opacity: .9;
+  opacity: 0.9;
   box-shadow: rgba(98, 98, 98, 0.315) 6px 6px 7px -2px;
 }
 
@@ -81,15 +81,12 @@ p {
   margin: 13px 0;
   padding: 2px 8px 3px;
 }
-
-
 .section_title {
   text-align: center;
   font-size: clamp(2.25rem, calc(5vw + 1rem), 4rem);
   line-height: 1;
   color: #17353d;
   margin-bottom: 5rem;
-
 }
 
 .hero {
@@ -101,8 +98,8 @@ p {
   background-position: center center;
   background-attachment: fixed;
   background-blend-mode: multiply;
-  background-image:
-    url(../img/shoe-3.png),
+  background-image: 
+    url(../img/shoe-3.png), 
     radial-gradient(#444, rgb(0, 0, 0))
 }
 
@@ -113,14 +110,13 @@ p {
 .featured_img:hover{
   transform: rotate(23deg) ;
   transition: all 0.8s;
-
 }
 
 .featured__item {
   display: block;
   position: relative;
   -webkit-transform: scale(0.85);
-          transform: scale(0.85);
+  transform: scale(0.85);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
@@ -133,7 +129,7 @@ p {
 
 .featured__item:hover, .featured__item:focus {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .featured__item::after {
@@ -145,7 +141,7 @@ p {
   left: 10%;
   padding: 75% 75% 0 0;
   border-radius: 50%;
-  background-image:radial-gradient(rgb(127 127 127),rgb(0 0 18));
+  background-image:radial-gradient(rgb(127 127 127), rgb(0 0 18));
   z-index: -1;
 }
 
@@ -161,40 +157,51 @@ p {
   font-size: 2.5rem;
 }
 
+.our-product {
+  background: linear-gradient(rgb(255, 254, 254), rgb(0, 0, 0));
+}
+
 .product {
-  background: radial-gradient(var(--clr-inner,rgb(107, 107, 107)),var(--clr-outer,black));
+  background: radial-gradient(var(--clr-inner, rgb(107, 107, 107)),
+      var(--clr-outer, black));
   border-radius: 1em;
   padding: 3em;
-  margin-bottom:3em ; 
+  margin-bottom: 5em;
+  text-align: center;
 }
 
 .product_title {
+  font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
   font-size: 4rem;
+  line-height: 1;
   color: #fff;
-  text-shadow: 0 0 .2rem rgba(#000,.2);
-  font-size:uppercase;
-
+  text-shadow: 0 0 0.2rem rgba(#000, 0.2);
+  text-transform: uppercase;
 }
 
-.product_img{
-  margin: -5em 0 0 0 ;
+.product_img {
+  margin: -5em 0 0 0;
 }
+
 @media (min-width: 45em) {
   .product {
     text-align: left;
-    margin-bottom: 9em;
+    margin-bottom: 12em;
   }
-  .product__title {
+
+  .product_title {
     margin: 0;
   }
-  .product__image {
+
+  .product_img {
     float: right;
     width: 65%;
     shape-outside: url(../img/shoe-1.png);
     shape-margin: 1em;
     margin: 0 -5em 0 0;
   }
-  .product.shoe-left .product__image {
+
+  .product.shoe-white .product_img {
     float: left;
     shape-outside: url(../img/shoe-2.png);
     margin: 0 0 0 -5em;
@@ -202,23 +209,24 @@ p {
   }
 }
 
-.hero{
-  --clr-accent: #faa700; 
+.hero {
+  --clr-accent: #faa700;
 }
+
 .shoe-red {
-  --clr-inner:#faa700;
-  --clr-outer:#e48d00;
-  --clr-accent:#a1173c;
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #a1173c;
 }
 
 .shoe-white {
-  --clr-inner:#fce4b3;
-  --clr-outer:#eac886;
-  --clr-accent:#2f4858;
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
 }
 
 .shoe-white2 {
-  --clr-inner:#6dd5ed;
-  --clr-outer:#2193b0;
-  --clr-accent:#008951;
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
 }
