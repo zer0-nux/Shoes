@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+}
+
+section {
+  padding: 5em 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.split>* {
+  flex-basis: 30%;
+  min-width: 15em;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: .5em 1.25em;
+  background: var(--clr-accent, rgba(1, 23, 41, 0.692));
+  border-radius: .25em;
+  transition:
+    trasform 250ms ease-in-out,
+    opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: .9;
+  box-shadow: rgba(98, 98, 98, 0.315) 6px 6px 7px -2px;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw +1rem), 4.5rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 13px 0;
+  padding: 2px 8px 3px;
+}
+
+
+.section_title {
+  text-align: center;
+  font-size: clamp(2.25rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+
+}
+
+.hero {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15em 0;
+  /*background: rgb(255, 255, 255)216, 206, 206);*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-image:
+    url(../img/shoe-3.png),
+    radial-gradient(#444, rgb(0, 0, 0))
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured_img:hover{
+  transform: rotate(23deg) ;
+  transition: all 0.8s;
+
+}
+
+.featured__item {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.featured__item:hover, .featured__item:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.featured__item::after {
+  content: '';
+  transition-duration: inherit;
+  transform: scale(1);
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 75% 75% 0 0;
+  border-radius: 50%;
+  background-image:radial-gradient(rgb(127 127 127),rgb(0 0 18));
+  z-index: -1;
+}
+
+.featured__details {
+  opacity: 0;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+}
+
+.featured_details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.product {
+  background: radial-gradient(var(--clr-inner,rgb(107, 107, 107)),var(--clr-outer,black));
+  border-radius: 1em;
+  padding: 3em;
+  margin-bottom:3em ; 
+}
+
+.product_title {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 0 0 .2rem rgba(#000,.2);
+  font-size:uppercase;
+
+}
+
+.product_img{
+  margin: -5em 0 0 0 ;
+}
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+    margin-bottom: 9em;
+  }
+  .product__title {
+    margin: 0;
+  }
+  .product__image {
+    float: right;
+    width: 65%;
+    shape-outside: url(../img/shoe-1.png);
+    shape-margin: 1em;
+    margin: 0 -5em 0 0;
+  }
+  .product.shoe-left .product__image {
+    float: left;
+    shape-outside: url(../img/shoe-2.png);
+    margin: 0 0 0 -5em;
+    shape-margin: 2em;
+  }
+}
+
+.hero{
+  --clr-accent: #faa700; 
+}
+.shoe-red {
+  --clr-inner:#faa700;
+  --clr-outer:#e48d00;
+  --clr-accent:#a1173c;
+}
+
+.shoe-white {
+  --clr-inner:#fce4b3;
+  --clr-outer:#eac886;
+  --clr-accent:#2f4858;
+}
+
+.shoe-white2 {
+  --clr-inner:#6dd5ed;
+  --clr-outer:#2193b0;
+  --clr-accent:#008951;
+}
