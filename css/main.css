@@ -183,6 +183,20 @@ p {
   margin: -5em 0 0 0;
 }
 
+.product_img:hover{
+  animation-name: floating;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  55.5%  { transform: translate(5px, 20px); }
+  to   { transform: translate(0, -0px); }    
+}
+
 @media (min-width: 45em) {
   .product {
     text-align: left;
