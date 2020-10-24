@@ -182,8 +182,7 @@ p {
 .product_img {
   margin: -5em 0 0 0;
 }
-
-.product_img:hover {  
+.spacing:hover >.product_img{  
   animation-name: floating;
   animation-duration: 2s;
   animation-iteration-count: infinite;
