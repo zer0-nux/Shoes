@@ -106,10 +106,11 @@ p {
 .featured {
   background: #eee;
 }
-
+.featured_img {
+  transition: all 0.8s
+}
 .featured_img:hover{
-  transform: rotate(23deg) ;
-  transition: all 0.8s;
+  transform: rotate(23deg);
 }
 
 .featured__item {
@@ -182,6 +183,7 @@ p {
 .product_img {
   margin: -5em 0 0 0;
 }
+
 .spacing:hover >.product_img{  
   animation-name: floating;
   animation-duration: 2s;
@@ -191,7 +193,7 @@ p {
 
 @keyframes floating {
   from { transform: translate(0,  0px); }
-  55%  { transform: translate(0, 10px); }
+  55%  { transform: translate(0, 12px); }
   to   { transform: translate(0, -0px); }    
 }
 
